@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import styled from 'styled-components'
 
 import { formatTotal } from 'utils/formatters'
@@ -18,17 +18,42 @@ const Wrapper = styled.div`
 `
 const Title = styled.h2``
 export default function Co2() {
-  const { equivalents, categories } = useContext(DataContext)
+  const { equivalents, categories, scenarios } = useContext(DataContext)
 
-  const equivalentToDisplay = equivalents
-    .map((equivalent) => ({
-      ...equivalent,
-      totalMultiplied:
-        formatTotal(equivalent) *
-        categories.find((category) => category.id === equivalent.category)
-          .multiplier,
-    }))
-    .sort((a, b) => (a.totalMultiplied > b.totalMultiplied ? 1 : -1))
+  const [equivalentsToDisplay, setEquivalentsToDisplay] = useState([])
+  useEffect(() => {
+    setEquivalentsToDisplay(
+      [
+        ...equivalents
+          .filter(
+            (equivalent) =>
+              !scenarios.find(
+                (scenario) => scenario.equivalent === equivalent.slug
+              )
+          )
+          .map((equivalent) => ({
+            ...equivalent,
+            totalMultiplied:
+              formatTotal(equivalent) *
+              categories.find((category) => category.id === equivalent.category)
+                .multiplier,
+          })),
+        ...scenarios.map((scenario) => ({
+          ...equivalents.find(
+            (equivalent) => equivalent.slug === scenario.equivalent
+          ),
+          name: { fr: scenario.name.fr },
+          totalMultiplied:
+            formatTotal(
+              equivalents.find(
+                (equivalent) => equivalent.slug === scenario.equivalent
+              )
+            ) * scenario.multiplier,
+          scenario: true,
+        })),
+      ].sort((a, b) => (a.totalMultiplied > b.totalMultiplied ? 1 : -1))
+    )
+  }, [equivalents, categories, scenarios])
 
   return (
     <Section>
@@ -37,7 +62,7 @@ export default function Co2() {
           Moins de 100 g de CO<sub>2</sub>e
         </Title>
         <Wrapper>
-          {equivalentToDisplay
+          {equivalentsToDisplay
             .filter((equivalent) => equivalent.totalMultiplied < 0.1)
             .map((equivalent) => (
               <Equivalent equivalent={equivalent} />
@@ -47,7 +72,7 @@ export default function Co2() {
           De 100 g à 1 kg de CO<sub>2</sub>e
         </Title>
         <Wrapper>
-          {equivalentToDisplay
+          {equivalentsToDisplay
             .filter(
               (equivalent) =>
                 equivalent.totalMultiplied > 0.1 &&
@@ -61,7 +86,7 @@ export default function Co2() {
           De 1 kg à 5 kg de CO<sub>2</sub>e
         </Title>
         <Wrapper>
-          {equivalentToDisplay
+          {equivalentsToDisplay
             .filter(
               (equivalent) =>
                 equivalent.totalMultiplied > 1 && equivalent.totalMultiplied < 5
@@ -74,7 +99,7 @@ export default function Co2() {
           De 5 kg à 10 kg de CO<sub>2</sub>e
         </Title>
         <Wrapper>
-          {equivalentToDisplay
+          {equivalentsToDisplay
             .filter(
               (equivalent) =>
                 equivalent.totalMultiplied > 5 &&
@@ -88,7 +113,7 @@ export default function Co2() {
           De 10 kg à 25 kg de CO<sub>2</sub>e
         </Title>
         <Wrapper>
-          {equivalentToDisplay
+          {equivalentsToDisplay
             .filter(
               (equivalent) =>
                 equivalent.totalMultiplied > 10 &&
@@ -102,7 +127,7 @@ export default function Co2() {
           De 25 kg à 50 kg de CO<sub>2</sub>e
         </Title>
         <Wrapper>
-          {equivalentToDisplay
+          {equivalentsToDisplay
             .filter(
               (equivalent) =>
                 equivalent.totalMultiplied > 25 &&
@@ -116,7 +141,7 @@ export default function Co2() {
           De 50 kg à 100 kg de CO<sub>2</sub>e
         </Title>
         <Wrapper>
-          {equivalentToDisplay
+          {equivalentsToDisplay
             .filter(
               (equivalent) =>
                 equivalent.totalMultiplied > 50 &&
@@ -130,7 +155,7 @@ export default function Co2() {
           De 100 kg à 200 kg de CO<sub>2</sub>e
         </Title>
         <Wrapper>
-          {equivalentToDisplay
+          {equivalentsToDisplay
             .filter(
               (equivalent) =>
                 equivalent.totalMultiplied > 100 &&
@@ -144,7 +169,7 @@ export default function Co2() {
           Plus de 200 kg de CO<sub>2</sub>e
         </Title>
         <Wrapper>
-          {equivalentToDisplay
+          {equivalentsToDisplay
             .filter((equivalent) => equivalent.totalMultiplied > 200)
             .map((equivalent) => (
               <Equivalent equivalent={equivalent} />

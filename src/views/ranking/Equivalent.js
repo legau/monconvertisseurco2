@@ -147,8 +147,8 @@ export default function Equivalent(props) {
       </EmojiWrapper>
       <Title>
         <Name>
-          {category?.multiplier}{' '}
-          {formatName(props.equivalent.name.fr, category?.multiplier)}
+          {props.equivalent.scenario ? 1 : category?.multiplier}{' '}
+          {formatName(props.equivalent.name.fr, category?.multiplier, true)}
           {props.equivalent.subtitle ? (
             <Subtitle>
               {formatName(props.equivalent.subtitle.fr, categories.multiplier)}

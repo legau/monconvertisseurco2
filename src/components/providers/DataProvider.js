@@ -10,6 +10,7 @@ import numerique from 'data/categories/numerique.json'
 import repas from 'data/categories/repas.json'
 import categories from 'data/categories.json'
 import ecv from 'data/ecv.json'
+import scenarios from 'data/scenarios.json'
 
 const equivalents = [
   ...boisson,
@@ -30,6 +31,7 @@ export default function DataProvider(props) {
         equivalents,
         categories,
         ecv,
+        scenarios,
         tiles,
         setTiles,
       }}

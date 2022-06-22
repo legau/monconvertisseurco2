@@ -1,0 +1,11 @@
+[
+  {
+    "name": {
+      "fr": "Paris New-York en avion"
+    },
+    "equivalent": "avion",
+    "emoji": "✈️",
+    "slug": "parisnewyork",
+    "multiplier": 5836
+  }
+]
