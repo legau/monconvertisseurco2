@@ -6,15 +6,30 @@ import Section from 'components/base/Section'
 import DataContext from 'utils/DataContext'
 import Equivalent from './ranking/Equivalent'
 
+const BigTitle = styled.h1`
+  margin: -0.5rem 0 0.75rem;
+  color: ${(props) => props.theme.colors.main};
+  text-align: center;
+`
+const Text = styled.p`
+  margin: 0 auto 4rem;
+  font-size: 1.125rem;
+  text-align: center;
+
+  ${(props) => props.theme.mq.medium} {
+    font-size: 1rem;
+  }
+`
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
   padding-bottom: 5rem;
+  margin-bottom: 2rem;
 `
 const Magnitude = styled.div`
   position: absolute;
   top: calc(50%);
-  right: -10rem;
+  right: -6rem;
   transform: translateY(-50%);
   font-size: 17rem;
   font-weight: bold;
@@ -94,6 +109,13 @@ export default function Co2() {
   return (
     <Section>
       <Section.Content>
+        <BigTitle>Ordres de grandeurs</BigTitle>
+        <Text>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          feugiat justo sit amet nunc cursus, ac mattis enim ultrices.
+          Pellentesque quis risus mauris. Nullam porttitor pellentesque felis,
+          sed vulputate orci ultrices nec.
+        </Text>
         <Wrapper>
           <Magnitude>
             <Small>
