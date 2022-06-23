@@ -26,12 +26,13 @@ const Wrapper = styled.div`
   padding-bottom: 5rem;
   margin-bottom: 2rem;
 `
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+`
 const Magnitude = styled.div`
-  position: absolute;
-  top: calc(50%);
-  right: -6rem;
-  transform: translateY(-50%);
-  font-size: 17rem;
+  font-size: 5rem;
   font-weight: bold;
   color: ${(props) => props.theme.colors.main};
   opacity: 0.9;
@@ -45,11 +46,10 @@ const Magnitude = styled.div`
   }
 `
 const Small = styled.span`
-  font-size: 9rem;
+  font-size: 3rem;
 `
 const Title = styled.h2`
   position: relative;
-  margin-bottom: 2.5rem;
   font-size: 1.75rem;
   font-weight: normal;
 `
@@ -116,15 +116,17 @@ export default function Co2() {
           sed vulputate orci ultrices nec.
         </Text>
         <Wrapper>
-          <Magnitude>
-            <Small>
-              x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-            </Small>
-            1
-          </Magnitude>
-          <Title>
-            <strong>Moins de 10 g</strong> de CO<sub>2</sub>e
-          </Title>
+          <Header>
+            <Title>
+              <strong>Moins de 10 g</strong>
+            </Title>
+            <Magnitude>
+              <Small>
+                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              </Small>
+              1
+            </Magnitude>
+          </Header>
           <Tiles>
             {equivalentsToDisplay
               .filter((equivalent) => equivalent.totalMultiplied < 0.01)
@@ -134,15 +136,17 @@ export default function Co2() {
           </Tiles>
         </Wrapper>
         <Wrapper>
-          <Magnitude>
-            <Small>
-              x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-            </Small>
-            10
-          </Magnitude>
-          <Title>
-            De <strong>10 g</strong> à <strong>100 g</strong> de CO<sub>2</sub>e
-          </Title>
+          <Header>
+            <Title>
+              De <strong>10 g</strong> à <strong>100 g</strong>
+            </Title>
+            <Magnitude>
+              <Small>
+                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              </Small>
+              10
+            </Magnitude>
+          </Header>
           <Tiles>
             {equivalentsToDisplay
               .filter(
@@ -156,15 +160,17 @@ export default function Co2() {
           </Tiles>
         </Wrapper>
         <Wrapper>
-          <Magnitude>
-            <Small>
-              x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-            </Small>
-            100
-          </Magnitude>
-          <Title>
-            De <strong>100 g</strong> à <strong>1 kg</strong> de CO<sub>2</sub>e
-          </Title>
+          <Header>
+            <Title>
+              De <strong>100 g</strong> à <strong>1 kg</strong>
+            </Title>
+            <Magnitude>
+              <Small>
+                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              </Small>
+              100
+            </Magnitude>
+          </Header>
           <Tiles>
             {equivalentsToDisplay
               .filter(
@@ -178,16 +184,18 @@ export default function Co2() {
           </Tiles>
         </Wrapper>
         <Wrapper>
-          <Magnitude>
-            <Small>
-              x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-            </Small>
-            1<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-            000
-          </Magnitude>
-          <Title>
-            De <strong>1 kg</strong> à <strong>5 kg</strong> de CO<sub>2</sub>e
-          </Title>
+          <Header>
+            <Title>
+              De <strong>1 kg</strong> à <strong>5 kg</strong>
+            </Title>
+            <Magnitude>
+              <Small>
+                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              </Small>
+              1<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              000
+            </Magnitude>
+          </Header>
           <Tiles>
             {equivalentsToDisplay
               .filter(
@@ -201,16 +209,18 @@ export default function Co2() {
           </Tiles>
         </Wrapper>
         <Wrapper>
-          <Magnitude>
-            <Small>
-              x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-            </Small>
-            5<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-            000
-          </Magnitude>
-          <Title>
-            De <strong>5 kg</strong> à <strong>10 kg</strong> de CO<sub>2</sub>e
-          </Title>
+          <Header>
+            <Title>
+              De <strong>5 kg</strong> à <strong>10 kg</strong>
+            </Title>
+            <Magnitude>
+              <Small>
+                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              </Small>
+              5<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              000
+            </Magnitude>
+          </Header>
           <Tiles>
             {equivalentsToDisplay
               .filter(
@@ -224,18 +234,19 @@ export default function Co2() {
           </Tiles>
         </Wrapper>
         <Wrapper>
-          <Magnitude>
-            <Small>
-              x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-            </Small>
-            10
-            <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-            000
-          </Magnitude>
-          <Title>
-            De <strong>10 kg</strong> à <strong>50 kg</strong> de CO<sub>2</sub>
-            e
-          </Title>
+          <Header>
+            <Title>
+              De <strong>10 kg</strong> à <strong>50 kg</strong>
+            </Title>
+            <Magnitude>
+              <Small>
+                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              </Small>
+              10
+              <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              000
+            </Magnitude>
+          </Header>
           <Tiles>
             {equivalentsToDisplay
               .filter(
@@ -249,18 +260,19 @@ export default function Co2() {
           </Tiles>
         </Wrapper>
         <Wrapper>
-          <Magnitude>
-            <Small>
-              x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-            </Small>
-            50
-            <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-            000
-          </Magnitude>
-          <Title>
-            De <strong>50 kg</strong> à <strong>200 kg</strong> de CO
-            <sub>2</sub>e
-          </Title>
+          <Header>
+            <Title>
+              De <strong>50 kg</strong> à <strong>200 kg</strong>
+            </Title>
+            <Magnitude>
+              <Small>
+                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              </Small>
+              50
+              <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              000
+            </Magnitude>
+          </Header>
           <Tiles>
             {equivalentsToDisplay
               .filter(
@@ -274,18 +286,19 @@ export default function Co2() {
           </Tiles>
         </Wrapper>
         <Wrapper>
-          <Magnitude>
-            <Small>
-              x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-            </Small>
-            200
-            <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-            000
-          </Magnitude>
-          <Title>
-            De <strong>200 kg</strong> à <strong>500 kg</strong> de CO
-            <sub>2</sub>e
-          </Title>
+          <Header>
+            <Title>
+              De <strong>200 kg</strong> à <strong>500 kg</strong>
+            </Title>
+            <Magnitude>
+              <Small>
+                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              </Small>
+              200
+              <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              000
+            </Magnitude>
+          </Header>
           <Tiles>
             {equivalentsToDisplay
               .filter(
@@ -299,17 +312,19 @@ export default function Co2() {
           </Tiles>
         </Wrapper>
         <Wrapper>
-          <Magnitude>
-            <Small>
-              x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-            </Small>
-            500
-            <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-            000
-          </Magnitude>
-          <Title>
-            <strong>Plus de 500 kg</strong> de CO<sub>2</sub>e
-          </Title>
+          <Header>
+            <Title>
+              <strong>Plus de 500 kg</strong>
+            </Title>
+            <Magnitude>
+              <Small>
+                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              </Small>
+              500
+              <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              000
+            </Magnitude>
+          </Header>
           <Tiles>
             {equivalentsToDisplay
               .filter((equivalent) => equivalent.totalMultiplied > 500)
