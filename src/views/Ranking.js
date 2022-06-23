@@ -25,6 +25,7 @@ export default function Co2() {
     setEquivalentsToDisplay(
       [
         ...equivalents
+          .filter((equivalent) => equivalent.default)
           .filter(
             (equivalent) =>
               !scenarios.find(
