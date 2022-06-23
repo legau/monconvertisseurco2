@@ -10,12 +10,6 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
   padding-bottom: 5rem;
-
-  &:hover {
-    ${Magnitude} {
-      opacity: 1;
-    }
-  }
 `
 const Magnitude = styled.div`
   position: absolute;
@@ -25,7 +19,7 @@ const Magnitude = styled.div`
   font-size: 17rem;
   font-weight: bold;
   color: ${(props) => props.theme.colors.main};
-  opacity: 0.7;
+  opacity: 0.9;
   line-height: 0.7;
   white-space: nowrap;
   transition: opacity 300ms;
@@ -40,6 +34,8 @@ const Small = styled.span`
 `
 const Title = styled.h2`
   position: relative;
+  margin-bottom: 2.5rem;
+  font-size: 1.75rem;
   font-weight: normal;
 `
 const Tiles = styled.div`
