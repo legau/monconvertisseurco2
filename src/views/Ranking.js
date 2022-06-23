@@ -16,7 +16,9 @@ const Wrapper = styled.div`
     gap: 0.75rem;
   }
 `
-const Title = styled.h2``
+const Title = styled.h2`
+  font-weight: normal;
+`
 export default function Co2() {
   const { equivalents, categories, scenarios } = useContext(DataContext)
 
@@ -64,7 +66,7 @@ export default function Co2() {
     <Section>
       <Section.Content>
         <Title>
-          Moins de 10 g de CO<sub>2</sub>e
+          Moins de <strong>10 g</strong> de CO<sub>2</sub>e
         </Title>
         <Wrapper>
           {equivalentsToDisplay
@@ -74,7 +76,7 @@ export default function Co2() {
             ))}
         </Wrapper>
         <Title>
-          De 10 g à 100 g de CO<sub>2</sub>e
+          De <strong>10 g</strong> à <strong>100 g</strong> de CO<sub>2</sub>e
         </Title>
         <Wrapper>
           {equivalentsToDisplay
@@ -88,7 +90,7 @@ export default function Co2() {
             ))}
         </Wrapper>
         <Title>
-          De 100 g à 1 kg de CO<sub>2</sub>e
+          De <strong>100 g</strong> à <strong>1 kg</strong> de CO<sub>2</sub>e
         </Title>
         <Wrapper>
           {equivalentsToDisplay
@@ -102,7 +104,7 @@ export default function Co2() {
             ))}
         </Wrapper>
         <Title>
-          De 1 kg à 5 kg de CO<sub>2</sub>e
+          De <strong>1 kg</strong> à <strong>5 kg</strong> de CO<sub>2</sub>e
         </Title>
         <Wrapper>
           {equivalentsToDisplay
@@ -115,7 +117,7 @@ export default function Co2() {
             ))}
         </Wrapper>
         <Title>
-          De 5 kg à 10 kg de CO<sub>2</sub>e
+          De <strong>5 kg</strong> à <strong>10 kg</strong> de CO<sub>2</sub>e
         </Title>
         <Wrapper>
           {equivalentsToDisplay
@@ -129,7 +131,7 @@ export default function Co2() {
             ))}
         </Wrapper>
         <Title>
-          De 10 kg à 50 kg de CO<sub>2</sub>e
+          De <strong>10 kg</strong> à <strong>50 kg</strong> de CO<sub>2</sub>e
         </Title>
         <Wrapper>
           {equivalentsToDisplay
@@ -143,7 +145,7 @@ export default function Co2() {
             ))}
         </Wrapper>
         <Title>
-          De 50 kg à 200 kg de CO<sub>2</sub>e
+          De <strong>50 kg</strong> à <strong>200 kg</strong> de CO<sub>2</sub>e
         </Title>
         <Wrapper>
           {equivalentsToDisplay
@@ -157,7 +159,8 @@ export default function Co2() {
             ))}
         </Wrapper>
         <Title>
-          De 200 kg à 500 kg de CO<sub>2</sub>e
+          De <strong>200 kg</strong> à <strong>500 kg</strong> de CO<sub>2</sub>
+          e
         </Title>
         <Wrapper>
           {equivalentsToDisplay
@@ -171,7 +174,7 @@ export default function Co2() {
             ))}
         </Wrapper>
         <Title>
-          Plus de 500 kg de CO<sub>2</sub>e
+          Plus de <strong>500 kg</strong> de CO<sub>2</sub>e
         </Title>
         <Wrapper>
           {equivalentsToDisplay
