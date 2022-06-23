@@ -28,10 +28,10 @@ const Wrapper = styled(MagicLink)`
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(228, 237, 246, 0.7);
+    background: rgba(228, 237, 246, 0.6);
     border: 0.0625rem solid rgba(228, 237, 246, 0.2);
     border-radius: 1rem;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(0.375rem);
     transition: background 300ms;
   }
 

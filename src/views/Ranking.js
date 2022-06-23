@@ -102,7 +102,7 @@ export default function Co2() {
             1
           </Magnitude>
           <Title>
-            Moins de <strong>10 g</strong> de CO<sub>2</sub>e
+            <strong>Moins de 10 g</strong> de CO<sub>2</sub>e
           </Title>
           <Tiles>
             {equivalentsToDisplay
@@ -287,7 +287,7 @@ export default function Co2() {
             000
           </Magnitude>
           <Title>
-            Plus de <strong>500 kg</strong> de CO<sub>2</sub>e
+            <strong>Plus de 500 kg</strong> de CO<sub>2</sub>e
           </Title>
           <Tiles>
             {equivalentsToDisplay
