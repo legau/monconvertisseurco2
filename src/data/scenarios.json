@@ -7,5 +7,128 @@
     "emoji": "✈️",
     "slug": "parisnewyork",
     "multiplier": 5836
+  },
+  {
+    "name": {
+      "fr": "Paris Marseille en TGV"
+    },
+    "equivalent": "tgv",
+    "emoji": "🚅",
+    "slug": "parismarseille",
+    "multiplier": 660
+  },
+  {
+    "name": {
+      "fr": "Aller au travail en bus"
+    },
+    "equivalent": "bus",
+    "emoji": "🚌",
+    "slug": "domiciletravailbus",
+    "multiplier": 26.6
+  },
+  {
+    "name": {
+      "fr": "Aller au travail en voiture"
+    },
+    "equivalent": "voiturethermique",
+    "emoji": "🚗",
+    "slug": "domiciletravail",
+    "multiplier": 26.6
+  },
+  {
+    "name": {
+      "fr": "Aller au travail en métro"
+    },
+    "equivalent": "metro",
+    "emoji": "🚇",
+    "slug": "domiciletravailmetro",
+    "multiplier": 26.6
+  },
+  {
+    "name": {
+      "fr": "Un repas avec du poisson"
+    },
+    "equivalent": "repasavecdupoissonblanc",
+    "emoji": "🐟",
+    "slug": "repaspoisson",
+    "multiplier": 1
+  },
+  {
+    "name": {
+      "fr": "Un email"
+    },
+    "subtitle": {
+      "fr": "(Écrire, envoyer et lire)"
+    },
+    "equivalent": "email",
+    "emoji": "✉️",
+    "slug": "email",
+    "total": 0.00756
+  },
+  {
+    "name": {
+      "fr": "1h de visio"
+    },
+    "subtitle": {
+      "fr": "(À 2 personnes)"
+    },
+    "equivalent": "visioconference",
+    "emoji": "🖥",
+    "slug": "visio2",
+    "total": 0.099
+  },
+  {
+    "name": {
+      "fr": "1h de visio"
+    },
+    "subtitle": {
+      "fr": "(À 20 personnes)"
+    },
+    "equivalent": "visioconference",
+    "emoji": "🖥",
+    "slug": "visio20",
+    "total": 0.7
+  },
+  {
+    "name": {
+      "fr": "Un verre d'eau"
+    },
+    "subtitle": {
+      "fr": "(du robinet)"
+    },
+    "equivalent": "eaudurobinet",
+    "emoji": "🚰",
+    "slug": "verredeau",
+    "multiplier": 0.5
+  },
+  {
+    "name": {
+      "fr": "Un verre d'eau"
+    },
+    "subtitle": {
+      "fr": "(en bouteille)"
+    },
+    "equivalent": "eauenbouteille",
+    "emoji": "🍶",
+    "slug": "verredeauenbouteille",
+    "multiplier": 0.5
+  },
+  {
+    "name": {
+      "fr": "Une pinte de bière"
+    },
+    "equivalent": "biere",
+    "emoji": "🍺",
+    "slug": "pintedebiere",
+    "multiplier": 0.5
+  },
+  {
+    "name": {
+      "fr": "Regarder une série en streaming"
+    },
+    "equivalent": "streaming",
+    "emoji": "🎞",
+    "slug": "seriestreaming",
+    "total": 0.0865
   }
 ]

@@ -11,6 +11,7 @@
     "total": 7.26,
     "default": true,
     "tile": true,
+    "ranking": true,
     "source": "https://bilans-ges.ademe.fr/fr/basecarbone/donnees-consulter/liste-element?recherche=repas"
   },
   {
@@ -25,6 +26,7 @@
     "total": 0.51,
     "default": true,
     "tile": true,
+    "ranking": true,
     "source": "https://bilans-ges.ademe.fr/fr/basecarbone/donnees-consulter/liste-element?recherche=repas"
   },
   {
@@ -39,6 +41,7 @@
     "total": 0.39,
     "default": true,
     "tile": false,
+    "ranking": false,
     "source": "https://nosgestesclimat.fr/documentation/alimentation/plats/v%C3%A9g%C3%A9talien/empreinte"
   },
   {
@@ -53,6 +56,7 @@
     "total": 1.98,
     "default": true,
     "tile": false,
+    "ranking": true,
     "source": "https://nosgestesclimat.fr/documentation/alimentation/plats/poisson-2/empreinte"
   },
   {
@@ -67,6 +71,7 @@
     "total": 1.11,
     "default": true,
     "tile": false,
+    "ranking": false,
     "source": "https://nosgestesclimat.fr/documentation/alimentation/plats/poisson-1/empreinter"
   },
   {
@@ -81,6 +86,7 @@
     "total": 1.58,
     "default": true,
     "tile": false,
+    "ranking": true,
     "source": "https://bilans-ges.ademe.fr/fr/basecarbone/donnees-consulter/liste-element?recherche=repas"
   }
 ]

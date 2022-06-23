@@ -25,7 +25,7 @@ export default function Co2() {
     setEquivalentsToDisplay(
       [
         ...equivalents
-          .filter((equivalent) => equivalent.default)
+          .filter((equivalent) => equivalent.ranking)
           .filter(
             (equivalent) =>
               !scenarios.find(
@@ -34,6 +34,7 @@ export default function Co2() {
           )
           .map((equivalent) => ({
             ...equivalent,
+            subtitle: null,
             totalMultiplied:
               formatTotal(equivalent) *
               categories.find((category) => category.id === equivalent.category)
@@ -44,7 +45,10 @@ export default function Co2() {
             (equivalent) => equivalent.slug === scenario.equivalent
           ),
           name: { fr: scenario.name.fr },
+          subtitle: { fr: scenario.subtitle?.fr || '' },
+          emoji: scenario.emoji,
           totalMultiplied:
+            scenario.total ||
             formatTotal(
               equivalents.find(
                 (equivalent) => equivalent.slug === scenario.equivalent
@@ -60,11 +64,25 @@ export default function Co2() {
     <Section>
       <Section.Content>
         <Title>
-          Moins de 100 g de CO<sub>2</sub>e
+          Moins de 10 g de CO<sub>2</sub>e
         </Title>
         <Wrapper>
           {equivalentsToDisplay
-            .filter((equivalent) => equivalent.totalMultiplied < 0.1)
+            .filter((equivalent) => equivalent.totalMultiplied < 0.01)
+            .map((equivalent) => (
+              <Equivalent equivalent={equivalent} />
+            ))}
+        </Wrapper>
+        <Title>
+          De 10 g à 100 g de CO<sub>2</sub>e
+        </Title>
+        <Wrapper>
+          {equivalentsToDisplay
+            .filter(
+              (equivalent) =>
+                equivalent.totalMultiplied > 0.01 &&
+                equivalent.totalMultiplied < 0.1
+            )
             .map((equivalent) => (
               <Equivalent equivalent={equivalent} />
             ))}
@@ -111,27 +129,13 @@ export default function Co2() {
             ))}
         </Wrapper>
         <Title>
-          De 10 kg à 25 kg de CO<sub>2</sub>e
+          De 10 kg à 50 kg de CO<sub>2</sub>e
         </Title>
         <Wrapper>
           {equivalentsToDisplay
             .filter(
               (equivalent) =>
                 equivalent.totalMultiplied > 10 &&
-                equivalent.totalMultiplied < 25
-            )
-            .map((equivalent) => (
-              <Equivalent equivalent={equivalent} />
-            ))}
-        </Wrapper>
-        <Title>
-          De 25 kg à 50 kg de CO<sub>2</sub>e
-        </Title>
-        <Wrapper>
-          {equivalentsToDisplay
-            .filter(
-              (equivalent) =>
-                equivalent.totalMultiplied > 25 &&
                 equivalent.totalMultiplied < 50
             )
             .map((equivalent) => (
@@ -139,27 +143,13 @@ export default function Co2() {
             ))}
         </Wrapper>
         <Title>
-          De 50 kg à 100 kg de CO<sub>2</sub>e
+          De 50 kg à 200 kg de CO<sub>2</sub>e
         </Title>
         <Wrapper>
           {equivalentsToDisplay
             .filter(
               (equivalent) =>
                 equivalent.totalMultiplied > 50 &&
-                equivalent.totalMultiplied < 100
-            )
-            .map((equivalent) => (
-              <Equivalent equivalent={equivalent} />
-            ))}
-        </Wrapper>
-        <Title>
-          De 100 kg à 200 kg de CO<sub>2</sub>e
-        </Title>
-        <Wrapper>
-          {equivalentsToDisplay
-            .filter(
-              (equivalent) =>
-                equivalent.totalMultiplied > 100 &&
                 equivalent.totalMultiplied < 200
             )
             .map((equivalent) => (
@@ -167,11 +157,25 @@ export default function Co2() {
             ))}
         </Wrapper>
         <Title>
-          Plus de 200 kg de CO<sub>2</sub>e
+          De 200 kg à 500 kg de CO<sub>2</sub>e
         </Title>
         <Wrapper>
           {equivalentsToDisplay
-            .filter((equivalent) => equivalent.totalMultiplied > 200)
+            .filter(
+              (equivalent) =>
+                equivalent.totalMultiplied > 200 &&
+                equivalent.totalMultiplied < 500
+            )
+            .map((equivalent) => (
+              <Equivalent equivalent={equivalent} />
+            ))}
+        </Wrapper>
+        <Title>
+          Plus de 500 kg de CO<sub>2</sub>e
+        </Title>
+        <Wrapper>
+          {equivalentsToDisplay
+            .filter((equivalent) => equivalent.totalMultiplied > 500)
             .map((equivalent) => (
               <Equivalent equivalent={equivalent} />
             ))}

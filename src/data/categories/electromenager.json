@@ -32,6 +32,7 @@
     "end": -0.659363081745786,
     "default": false,
     "tile": false,
+    "ranking": false,
     "source": "https://librairie.ademe.fr/dechets-economie-circulaire/127-modelisation-et-evaluation-environnementale-de-produits-de-consommation-et-biens-d-equipement.html"
   },
   {
@@ -70,6 +71,7 @@
     "end": 52.7491626905852,
     "default": false,
     "tile": false,
+    "ranking": true,
     "source": "https://librairie.ademe.fr/dechets-economie-circulaire/127-modelisation-et-evaluation-environnementale-de-produits-de-consommation-et-biens-d-equipement.html"
   },
   {
@@ -108,6 +110,7 @@
     "end": 29.8824988339172,
     "default": true,
     "tile": false,
+    "ranking": false,
     "source": "https://librairie.ademe.fr/dechets-economie-circulaire/127-modelisation-et-evaluation-environnementale-de-produits-de-consommation-et-biens-d-equipement.html"
   },
   {
@@ -146,6 +149,7 @@
     "end": 23.9101982705374,
     "default": false,
     "tile": false,
+    "ranking": false,
     "source": "https://librairie.ademe.fr/dechets-economie-circulaire/127-modelisation-et-evaluation-environnementale-de-produits-de-consommation-et-biens-d-equipement.html"
   },
   {
@@ -161,6 +165,7 @@
     "total": 217,
     "default": true,
     "tile": false,
+    "ranking": true,
     "source": "https://librairie.ademe.fr/dechets-economie-circulaire/127-modelisation-et-evaluation-environnementale-de-produits-de-consommation-et-biens-d-equipement.html"
   },
   {
@@ -195,6 +200,7 @@
     "end": -22.6301522707884,
     "default": true,
     "tile": false,
+    "ranking": true,
     "source": "https://librairie.ademe.fr/dechets-economie-circulaire/127-modelisation-et-evaluation-environnementale-de-produits-de-consommation-et-biens-d-equipement.html"
   },
   {
@@ -232,6 +238,7 @@
     "end": -47.7754436590173,
     "default": true,
     "tile": false,
+    "ranking": false,
     "source": "https://librairie.ademe.fr/dechets-economie-circulaire/127-modelisation-et-evaluation-environnementale-de-produits-de-consommation-et-biens-d-equipement.html"
   },
   {
@@ -266,6 +273,7 @@
     "end": -20.163316975983,
     "default": true,
     "tile": false,
+    "ranking": true,
     "source": "https://librairie.ademe.fr/dechets-economie-circulaire/127-modelisation-et-evaluation-environnementale-de-produits-de-consommation-et-biens-d-equipement.html"
   },
   {
@@ -278,6 +286,7 @@
     "total": 47.3,
     "default": true,
     "tile": false,
+    "ranking": true,
     "source": "https://librairie.ademe.fr/dechets-economie-circulaire/127-modelisation-et-evaluation-environnementale-de-produits-de-consommation-et-biens-d-equipement.html"
   },
   {
@@ -313,6 +322,7 @@
     "end": 65.4233854443126,
     "default": false,
     "tile": false,
+    "ranking": false,
     "source": "https://librairie.ademe.fr/dechets-economie-circulaire/127-modelisation-et-evaluation-environnementale-de-produits-de-consommation-et-biens-d-equipement.html"
   }
 ]
