@@ -22,7 +22,7 @@ const Magnitude = styled.div`
   top: calc(50%);
   right: -10rem;
   transform: translateY(-50%);
-  font-size: 15rem;
+  font-size: 17rem;
   font-weight: bold;
   color: ${(props) => props.theme.colors.main};
   opacity: 0.7;
