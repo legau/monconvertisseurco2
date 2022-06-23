@@ -716,7 +716,7 @@
     "end": -0.587240636962036,
     "default": false,
     "tile": false,
-    "ranking": false,
+    "ranking": true,
     "source": "https://librairie.ademe.fr/dechets-economie-circulaire/127-modelisation-et-evaluation-environnementale-de-produits-de-consommation-et-biens-d-equipement.html"
   },
   {
