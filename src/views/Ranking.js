@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useMemo, useContext } from 'react'
 import styled from 'styled-components'
 
 import { formatTotal } from 'utils/formatters'
@@ -66,9 +66,8 @@ const Tiles = styled.div`
 export default function Co2() {
   const { equivalents, categories, scenarios } = useContext(DataContext)
 
-  const [equivalentsToDisplay, setEquivalentsToDisplay] = useState([])
-  useEffect(() => {
-    setEquivalentsToDisplay(
+  const equivalentsToDisplay = useMemo(
+    () =>
       [
         ...equivalents
           .filter((equivalent) => equivalent.ranking)
@@ -102,9 +101,9 @@ export default function Co2() {
             ) * scenario.multiplier,
           scenario: true,
         })),
-      ].sort((a, b) => (a.totalMultiplied > b.totalMultiplied ? 1 : -1))
-    )
-  }, [equivalents, categories, scenarios])
+      ].sort((a, b) => (a.totalMultiplied > b.totalMultiplied ? 1 : -1)),
+    [equivalents, categories, scenarios]
+  )
 
   return (
     <Section>
