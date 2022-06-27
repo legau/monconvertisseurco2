@@ -138,7 +138,6 @@ export default function Co2() {
         </Text>
         <Frise>
           <Wrapper>
-            <Magnitude>1 g</Magnitude>
             <Tiles>
               {equivalentsToDisplay
                 .filter((equivalent) => equivalent.totalMultiplied < 0.01)
