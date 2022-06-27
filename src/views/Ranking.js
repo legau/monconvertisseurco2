@@ -22,6 +22,12 @@ const Text = styled.p`
 `
 const Frise = styled.div`
   position: relative;
+`
+const Wrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 16.25rem;
+  padding: 3.5rem 0 3.5rem;
 
   &:before {
     content: '';
@@ -34,31 +40,35 @@ const Frise = styled.div`
     background-color: ${(props) => props.theme.colors.main};
   }
 `
-const Wrapper = styled.div`
-  position: relative;
-  width: 100%;
-  padding: 4rem 0 3rem;
-`
 
 const Magnitude = styled.div`
   position: absolute;
   top: 0;
-  right: calc(50% + 1.5rem);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.25rem 1rem;
   font-size: 1.5rem;
   font-weight: bold;
   color: ${(props) => props.theme.colors.main};
-  opacity: 0.9;
   line-height: 0.7;
   white-space: nowrap;
-  transition: opacity 300ms;
-  cursor: default;
+  background-color: ${(props) => props.theme.colors.background};
 
   &:before {
     content: '';
     position: absolute;
     top: 50%;
-    left: calc(100% + 0.75rem);
-    width: 1.5rem;
+    left: 100%;
+    width: 1rem;
+    height: 0.125rem;
+    background-color: ${(props) => props.theme.colors.main};
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: 1rem;
     height: 0.125rem;
     background-color: ${(props) => props.theme.colors.main};
   }
@@ -67,6 +77,7 @@ const Tiles = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
 
   ${(props) => props.theme.mq.medium} {
@@ -127,7 +138,7 @@ export default function Co2() {
         </Text>
         <Frise>
           <Wrapper>
-            <Magnitude>0 g</Magnitude>
+            <Magnitude>1 g</Magnitude>
             <Tiles>
               {equivalentsToDisplay
                 .filter((equivalent) => equivalent.totalMultiplied < 0.01)
@@ -150,10 +161,8 @@ export default function Co2() {
                 ))}
             </Tiles>
           </Wrapper>
-
           <Wrapper>
             <Magnitude>100 g</Magnitude>
-
             <Tiles>
               {equivalentsToDisplay
                 .filter(
@@ -171,30 +180,11 @@ export default function Co2() {
               1<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
               000 g
             </Magnitude>
-
             <Tiles>
               {equivalentsToDisplay
                 .filter(
                   (equivalent) =>
                     equivalent.totalMultiplied > 1 &&
-                    equivalent.totalMultiplied < 5
-                )
-                .map((equivalent) => (
-                  <Equivalent equivalent={equivalent} />
-                ))}
-            </Tiles>
-          </Wrapper>
-          <Wrapper>
-            <Magnitude>
-              5<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              000 g
-            </Magnitude>
-
-            <Tiles>
-              {equivalentsToDisplay
-                .filter(
-                  (equivalent) =>
-                    equivalent.totalMultiplied > 5 &&
                     equivalent.totalMultiplied < 10
                 )
                 .map((equivalent) => (
@@ -208,13 +198,12 @@ export default function Co2() {
               <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
               000 g
             </Magnitude>
-
             <Tiles>
               {equivalentsToDisplay
                 .filter(
                   (equivalent) =>
                     equivalent.totalMultiplied > 10 &&
-                    equivalent.totalMultiplied < 50
+                    equivalent.totalMultiplied < 100
                 )
                 .map((equivalent) => (
                   <Equivalent equivalent={equivalent} />
@@ -223,17 +212,16 @@ export default function Co2() {
           </Wrapper>
           <Wrapper>
             <Magnitude>
-              50
+              100
               <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
               000 g
             </Magnitude>
-
             <Tiles>
               {equivalentsToDisplay
                 .filter(
                   (equivalent) =>
-                    equivalent.totalMultiplied > 50 &&
-                    equivalent.totalMultiplied < 200
+                    equivalent.totalMultiplied > 100 &&
+                    equivalent.totalMultiplied < 1000
                 )
                 .map((equivalent) => (
                   <Equivalent equivalent={equivalent} />
@@ -242,33 +230,18 @@ export default function Co2() {
           </Wrapper>
           <Wrapper>
             <Magnitude>
-              200
+              1 <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              000
               <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
               000 g
             </Magnitude>
-
             <Tiles>
               {equivalentsToDisplay
                 .filter(
                   (equivalent) =>
-                    equivalent.totalMultiplied > 200 &&
-                    equivalent.totalMultiplied < 500
+                    equivalent.totalMultiplied > 1000 &&
+                    equivalent.totalMultiplied < 10000
                 )
-                .map((equivalent) => (
-                  <Equivalent equivalent={equivalent} />
-                ))}
-            </Tiles>
-          </Wrapper>
-          <Wrapper>
-            <Magnitude>
-              500
-              <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              000 g
-            </Magnitude>
-
-            <Tiles>
-              {equivalentsToDisplay
-                .filter((equivalent) => equivalent.totalMultiplied > 500)
                 .map((equivalent) => (
                   <Equivalent equivalent={equivalent} />
                 ))}

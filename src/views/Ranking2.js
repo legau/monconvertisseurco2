@@ -245,7 +245,7 @@ export default function Co2() {
               <Small>
                 x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
               </Small>
-              200
+              100
               <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
               000
             </Magnitude>
@@ -257,6 +257,29 @@ export default function Co2() {
                   equivalent.totalMultiplied > 100 &&
                   equivalent.totalMultiplied < 1000
               )
+              .map((equivalent) => (
+                <Equivalent equivalent={equivalent} />
+              ))}
+          </Tiles>
+        </Wrapper>
+        <Wrapper>
+          <Header>
+            <Title>
+              <strong>Plus de 1000 kg</strong>
+            </Title>
+            <Magnitude>
+              <Small>
+                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              </Small>
+              1<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              000
+              <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+              000
+            </Magnitude>
+          </Header>
+          <Tiles>
+            {equivalentsToDisplay
+              .filter((equivalent) => equivalent.totalMultiplied > 1000)
               .map((equivalent) => (
                 <Equivalent equivalent={equivalent} />
               ))}

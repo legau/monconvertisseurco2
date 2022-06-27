@@ -11,7 +11,7 @@
     "total": 0.0025,
     "default": true,
     "tile": false,
-    "ranking": true,
+    "ranking": false,
     "source": "https://www.bilans-ges.ademe.fr/fr/basecarbone/donnees-consulter/liste-element?recherche=m%C3%A9tro"
   },
   {
@@ -29,7 +29,7 @@
     "total": 0.193,
     "default": true,
     "tile": true,
-    "ranking": true,
+    "ranking": false,
     "source": "https://www.bilans-ges.ademe.fr/fr/basecarbone/donnees-consulter/liste-element?recherche=voiture"
   },
   {
@@ -63,7 +63,7 @@
     "total": 0.103,
     "default": true,
     "tile": false,
-    "ranking": true,
+    "ranking": false,
     "source": "https://www.bilans-ges.ademe.fr/fr/basecarbone/donnees-consulter/liste-element?recherche=autobus"
   },
   {
@@ -79,7 +79,7 @@
     "total": 0.00173,
     "default": true,
     "tile": true,
-    "ranking": true,
+    "ranking": false,
     "source": "https://www.bilans-ges.ademe.fr/fr/basecarbone/donnees-consulter/liste-element?recherche=tgv"
   },
   {
@@ -95,7 +95,7 @@
     "total": 0.126,
     "default": true,
     "tile": false,
-    "ranking": true,
+    "ranking": false,
     "source": "https://www.bilans-ges.ademe.fr/fr/basecarbone/donnees-consulter/liste-element?recherche=Avion"
   }
 ]

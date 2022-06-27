@@ -1,12 +1,12 @@
 [
   {
     "name": {
-      "fr": "Paris New-York en avion"
+      "fr": "A/R Paris New-York en avion"
     },
     "equivalent": "avion",
     "emoji": "✈️",
     "slug": "parisnewyork",
-    "multiplier": 5836
+    "multiplier": 11672
   },
   {
     "name": {
@@ -16,15 +16,6 @@
     "emoji": "🚅",
     "slug": "parismarseille",
     "multiplier": 660
-  },
-  {
-    "name": {
-      "fr": "Aller au travail en bus"
-    },
-    "equivalent": "bus",
-    "emoji": "🚌",
-    "slug": "domiciletravailbus",
-    "multiplier": 26.6
   },
   {
     "name": {
@@ -43,15 +34,6 @@
     "emoji": "🚇",
     "slug": "domiciletravailmetro",
     "multiplier": 26.6
-  },
-  {
-    "name": {
-      "fr": "Un repas avec du poisson"
-    },
-    "equivalent": "repasavecdupoissonblanc",
-    "emoji": "🐟",
-    "slug": "repaspoisson",
-    "multiplier": 1
   },
   {
     "name": {
