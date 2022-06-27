@@ -20,19 +20,31 @@ const Text = styled.p`
     font-size: 1rem;
   }
 `
+const Frise = styled.div`
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 0.125rem;
+    background-color: ${(props) => props.theme.colors.main};
+  }
+`
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  padding-bottom: 5rem;
-  margin-bottom: 2rem;
+  padding: 4rem 0 3rem;
 `
-const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-`
+
 const Magnitude = styled.div`
-  font-size: 5rem;
+  position: absolute;
+  top: 0;
+  right: calc(50% + 1.5rem);
+  font-size: 1.5rem;
   font-weight: bold;
   color: ${(props) => props.theme.colors.main};
   opacity: 0.9;
@@ -41,17 +53,15 @@ const Magnitude = styled.div`
   transition: opacity 300ms;
   cursor: default;
 
-  ${Wrapper}:hover & {
-    opacity: 1;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 0.75rem);
+    width: 1.5rem;
+    height: 0.125rem;
+    background-color: ${(props) => props.theme.colors.main};
   }
-`
-const Small = styled.span`
-  font-size: 3rem;
-`
-const Title = styled.h2`
-  position: relative;
-  font-size: 1.75rem;
-  font-weight: normal;
 `
 const Tiles = styled.div`
   position: relative;
@@ -115,227 +125,157 @@ export default function Co2() {
           Pellentesque quis risus mauris. Nullam porttitor pellentesque felis,
           sed vulputate orci ultrices nec.
         </Text>
-        <Wrapper>
-          <Header>
-            <Title>
-              <strong>Moins de 10 g</strong>
-            </Title>
+        <Frise>
+          <Wrapper>
+            <Magnitude>0 g</Magnitude>
+            <Tiles>
+              {equivalentsToDisplay
+                .filter((equivalent) => equivalent.totalMultiplied < 0.01)
+                .map((equivalent) => (
+                  <Equivalent equivalent={equivalent} />
+                ))}
+            </Tiles>
+          </Wrapper>
+          <Wrapper>
+            <Magnitude>10 g</Magnitude>
+            <Tiles>
+              {equivalentsToDisplay
+                .filter(
+                  (equivalent) =>
+                    equivalent.totalMultiplied > 0.01 &&
+                    equivalent.totalMultiplied < 0.1
+                )
+                .map((equivalent) => (
+                  <Equivalent equivalent={equivalent} />
+                ))}
+            </Tiles>
+          </Wrapper>
+
+          <Wrapper>
+            <Magnitude>100 g</Magnitude>
+
+            <Tiles>
+              {equivalentsToDisplay
+                .filter(
+                  (equivalent) =>
+                    equivalent.totalMultiplied > 0.1 &&
+                    equivalent.totalMultiplied < 1
+                )
+                .map((equivalent) => (
+                  <Equivalent equivalent={equivalent} />
+                ))}
+            </Tiles>
+          </Wrapper>
+          <Wrapper>
             <Magnitude>
-              <Small>
-                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              </Small>
-              1
-            </Magnitude>
-          </Header>
-          <Tiles>
-            {equivalentsToDisplay
-              .filter((equivalent) => equivalent.totalMultiplied < 0.01)
-              .map((equivalent) => (
-                <Equivalent equivalent={equivalent} />
-              ))}
-          </Tiles>
-        </Wrapper>
-        <Wrapper>
-          <Header>
-            <Title>
-              De <strong>10 g</strong> à <strong>100 g</strong>
-            </Title>
-            <Magnitude>
-              <Small>
-                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              </Small>
-              10
-            </Magnitude>
-          </Header>
-          <Tiles>
-            {equivalentsToDisplay
-              .filter(
-                (equivalent) =>
-                  equivalent.totalMultiplied > 0.01 &&
-                  equivalent.totalMultiplied < 0.1
-              )
-              .map((equivalent) => (
-                <Equivalent equivalent={equivalent} />
-              ))}
-          </Tiles>
-        </Wrapper>
-        <Wrapper>
-          <Header>
-            <Title>
-              De <strong>100 g</strong> à <strong>1 kg</strong>
-            </Title>
-            <Magnitude>
-              <Small>
-                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              </Small>
-              100
-            </Magnitude>
-          </Header>
-          <Tiles>
-            {equivalentsToDisplay
-              .filter(
-                (equivalent) =>
-                  equivalent.totalMultiplied > 0.1 &&
-                  equivalent.totalMultiplied < 1
-              )
-              .map((equivalent) => (
-                <Equivalent equivalent={equivalent} />
-              ))}
-          </Tiles>
-        </Wrapper>
-        <Wrapper>
-          <Header>
-            <Title>
-              De <strong>1 kg</strong> à <strong>5 kg</strong>
-            </Title>
-            <Magnitude>
-              <Small>
-                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              </Small>
               1<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              000
+              000 g
             </Magnitude>
-          </Header>
-          <Tiles>
-            {equivalentsToDisplay
-              .filter(
-                (equivalent) =>
-                  equivalent.totalMultiplied > 1 &&
-                  equivalent.totalMultiplied < 5
-              )
-              .map((equivalent) => (
-                <Equivalent equivalent={equivalent} />
-              ))}
-          </Tiles>
-        </Wrapper>
-        <Wrapper>
-          <Header>
-            <Title>
-              De <strong>5 kg</strong> à <strong>10 kg</strong>
-            </Title>
+
+            <Tiles>
+              {equivalentsToDisplay
+                .filter(
+                  (equivalent) =>
+                    equivalent.totalMultiplied > 1 &&
+                    equivalent.totalMultiplied < 5
+                )
+                .map((equivalent) => (
+                  <Equivalent equivalent={equivalent} />
+                ))}
+            </Tiles>
+          </Wrapper>
+          <Wrapper>
             <Magnitude>
-              <Small>
-                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              </Small>
               5<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              000
+              000 g
             </Magnitude>
-          </Header>
-          <Tiles>
-            {equivalentsToDisplay
-              .filter(
-                (equivalent) =>
-                  equivalent.totalMultiplied > 5 &&
-                  equivalent.totalMultiplied < 10
-              )
-              .map((equivalent) => (
-                <Equivalent equivalent={equivalent} />
-              ))}
-          </Tiles>
-        </Wrapper>
-        <Wrapper>
-          <Header>
-            <Title>
-              De <strong>10 kg</strong> à <strong>50 kg</strong>
-            </Title>
+
+            <Tiles>
+              {equivalentsToDisplay
+                .filter(
+                  (equivalent) =>
+                    equivalent.totalMultiplied > 5 &&
+                    equivalent.totalMultiplied < 10
+                )
+                .map((equivalent) => (
+                  <Equivalent equivalent={equivalent} />
+                ))}
+            </Tiles>
+          </Wrapper>
+          <Wrapper>
             <Magnitude>
-              <Small>
-                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              </Small>
               10
               <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              000
+              000 g
             </Magnitude>
-          </Header>
-          <Tiles>
-            {equivalentsToDisplay
-              .filter(
-                (equivalent) =>
-                  equivalent.totalMultiplied > 10 &&
-                  equivalent.totalMultiplied < 50
-              )
-              .map((equivalent) => (
-                <Equivalent equivalent={equivalent} />
-              ))}
-          </Tiles>
-        </Wrapper>
-        <Wrapper>
-          <Header>
-            <Title>
-              De <strong>50 kg</strong> à <strong>200 kg</strong>
-            </Title>
+
+            <Tiles>
+              {equivalentsToDisplay
+                .filter(
+                  (equivalent) =>
+                    equivalent.totalMultiplied > 10 &&
+                    equivalent.totalMultiplied < 50
+                )
+                .map((equivalent) => (
+                  <Equivalent equivalent={equivalent} />
+                ))}
+            </Tiles>
+          </Wrapper>
+          <Wrapper>
             <Magnitude>
-              <Small>
-                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              </Small>
               50
               <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              000
+              000 g
             </Magnitude>
-          </Header>
-          <Tiles>
-            {equivalentsToDisplay
-              .filter(
-                (equivalent) =>
-                  equivalent.totalMultiplied > 50 &&
-                  equivalent.totalMultiplied < 200
-              )
-              .map((equivalent) => (
-                <Equivalent equivalent={equivalent} />
-              ))}
-          </Tiles>
-        </Wrapper>
-        <Wrapper>
-          <Header>
-            <Title>
-              De <strong>200 kg</strong> à <strong>500 kg</strong>
-            </Title>
+
+            <Tiles>
+              {equivalentsToDisplay
+                .filter(
+                  (equivalent) =>
+                    equivalent.totalMultiplied > 50 &&
+                    equivalent.totalMultiplied < 200
+                )
+                .map((equivalent) => (
+                  <Equivalent equivalent={equivalent} />
+                ))}
+            </Tiles>
+          </Wrapper>
+          <Wrapper>
             <Magnitude>
-              <Small>
-                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              </Small>
               200
               <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              000
+              000 g
             </Magnitude>
-          </Header>
-          <Tiles>
-            {equivalentsToDisplay
-              .filter(
-                (equivalent) =>
-                  equivalent.totalMultiplied > 200 &&
-                  equivalent.totalMultiplied < 500
-              )
-              .map((equivalent) => (
-                <Equivalent equivalent={equivalent} />
-              ))}
-          </Tiles>
-        </Wrapper>
-        <Wrapper>
-          <Header>
-            <Title>
-              <strong>Plus de 500 kg</strong>
-            </Title>
+
+            <Tiles>
+              {equivalentsToDisplay
+                .filter(
+                  (equivalent) =>
+                    equivalent.totalMultiplied > 200 &&
+                    equivalent.totalMultiplied < 500
+                )
+                .map((equivalent) => (
+                  <Equivalent equivalent={equivalent} />
+                ))}
+            </Tiles>
+          </Wrapper>
+          <Wrapper>
             <Magnitude>
-              <Small>
-                x<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              </Small>
               500
               <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-              000
+              000 g
             </Magnitude>
-          </Header>
-          <Tiles>
-            {equivalentsToDisplay
-              .filter((equivalent) => equivalent.totalMultiplied > 500)
-              .map((equivalent) => (
-                <Equivalent equivalent={equivalent} />
-              ))}
-          </Tiles>
-        </Wrapper>
-        <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
+
+            <Tiles>
+              {equivalentsToDisplay
+                .filter((equivalent) => equivalent.totalMultiplied > 500)
+                .map((equivalent) => (
+                  <Equivalent equivalent={equivalent} />
+                ))}
+            </Tiles>
+          </Wrapper>
+        </Frise>
       </Section.Content>
-      <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
     </Section>
   )
 }
