@@ -66,7 +66,7 @@ export default function Ranking() {
   return (
     <Section>
       <Section.Content>
-        <BigTitle>Ordres de grandeurs</BigTitle>
+        <BigTitle>Ordres de grandeur</BigTitle>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
           feugiat justo sit amet nunc cursus, ac mattis enim ultrices.

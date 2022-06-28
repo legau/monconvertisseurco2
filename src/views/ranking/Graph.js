@@ -34,7 +34,7 @@ export default function Graph(props) {
             )
           }}
         >
-          Voir plus
+          Voir la suite
         </Button>
       </Button.Wrapper>
     </>

@@ -130,10 +130,10 @@ export default function Equivalent(props) {
           <Title>
             {!props.equivalent.scenario && 'Un'}{' '}
             <span>{formatName(props.equivalent.name.fr, 1, true)}</span>
-            {props.displayAll && props.equivalent.subtitle && (
+            {props.equivalent.scenario && props.equivalent.subtitle && (
               <Subtitle>
                 {' '}
-                ({formatName(props.equivalent.subtitle.fr, 1)})
+                {formatName(props.equivalent.subtitle.fr, 1)}
               </Subtitle>
             )}
           </Title>
