@@ -99,7 +99,8 @@ export default function Category(props) {
         {!props.title && (
           <Bottom>
             <Disclaimer>
-              Valeurs exprimées en kg CO2e émis {props.category?.unit}.
+              Valeurs exprimées en {props.category?.unit} CO2e émis{' '}
+              {props.category?.including}.
             </Disclaimer>
             <Button to={'/ordredegrandeur'} hollow>
               Comparer avec d'autres catégories

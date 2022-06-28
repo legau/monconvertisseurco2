@@ -1,0 +1,104 @@
+[
+  {
+    "name": {
+      "fr": "Email[s]"
+    },
+    "subtitle": {
+      "fr": "Écrire, envoyer et lire"
+    },
+    "slug": "email",
+    "emoji": "✉️",
+    "category": 8,
+    "total": 0.00756,
+    "default": true,
+    "tile": true,
+    "ranking": true
+  },
+  {
+    "name": {
+      "fr": "Heure[s] de streaming"
+    },
+    "subtitle": {
+      "fr": "Qualité 4k"
+    },
+    "slug": "streamingwifi4k",
+    "emoji": "🎞",
+    "category": 8,
+    "total": 0.00963,
+    "default": true,
+    "tile": false,
+    "ranking": true
+  },
+  {
+    "name": {
+      "fr": "Requête[s] internet"
+    },
+    "slug": "requeteinternet",
+    "emoji": "👩‍💻",
+    "category": 8,
+    "total": 0.00173,
+    "default": true,
+    "tile": false,
+    "ranking": true
+  },
+  {
+    "name": {
+      "fr": "Heure[s] de visio"
+    },
+    "subtitle": {
+      "fr": "Entre 2 postes"
+    },
+    "slug": "visioconferencea2",
+    "emoji": "🖥",
+    "category": 8,
+    "total": 0.00768,
+    "default": true,
+    "tile": false,
+    "ranking": true
+  },
+  {
+    "name": {
+      "fr": "Heure[s] de visio"
+    },
+    "subtitle": {
+      "fr": "Entre 20 postes"
+    },
+    "slug": "visioconferencea20",
+    "emoji": "🖥",
+    "category": 8,
+    "total": 0.7,
+    "default": false,
+    "tile": false,
+    "ranking": true
+  },
+  {
+    "name": {
+      "fr": "Go de donnée"
+    },
+    "subtitle": {
+      "fr": "En connexion fixe"
+    },
+    "slug": "godedonneefixe",
+    "emoji": "🖥",
+    "category": 8,
+    "total": 0.02,
+    "default": true,
+    "tile": false,
+    "ranking": true
+  },
+  {
+    "name": {
+      "fr": "Go de donnée"
+    },
+    "subtitle": {
+      "fr": "En 4G"
+    },
+    "slug": "godedonnee4g",
+    "emoji": "🖥",
+    "category": 8,
+    "total": 0.142,
+    "default": false,
+    "tile": false,
+    "ranking": true
+  }
+]

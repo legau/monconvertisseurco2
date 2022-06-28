@@ -66,9 +66,14 @@ export default function Details(props) {
       <Section>
         <StyledSectionContent flex>
           <Disclaimer>
-            Valeurs exprimées en kg CO2e émis {props.category?.unit}.
+            Valeurs exprimées en {props.category?.unit} CO2e émis{' '}
+            {props.category?.including}.
           </Disclaimer>
-          <StyledMagicLink to={props.equivalent.source}>Source</StyledMagicLink>
+          {props.equivalent.source && (
+            <StyledMagicLink to={props.equivalent.source}>
+              Source
+            </StyledMagicLink>
+          )}
         </StyledSectionContent>
       </Section>
     </>

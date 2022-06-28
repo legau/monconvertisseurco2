@@ -125,10 +125,7 @@ export default function Equivalent(props) {
       <ChartWrapper>
         <TitleWrapper>
           <Title>
-            {props.category.multiplier}{' '}
-            <span>
-              {formatName(props.equivalent.name.fr, props.category.multiplier)}
-            </span>
+            {1} <span>{formatName(props.equivalent.name.fr, 1)}</span>
             {props.displayAll && props.equivalent.subtitle && (
               <Subtitle>
                 {' '}
@@ -157,7 +154,7 @@ export default function Equivalent(props) {
               </Number>
               <Unit>
                 {' '}
-                kg CO
+                {props.category.unit} CO
                 <sub>2</sub>e
               </Unit>
             </Value>

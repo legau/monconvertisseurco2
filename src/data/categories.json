@@ -6,8 +6,9 @@
     },
     "emoji": "💻",
     "slug": "numerique",
+    "unit": "kg",
     "multiplier": 1,
-    "unit": "par produit comprenant la fabrication et la distribution"
+    "including": "par produit comprenant la fabrication et la distribution"
   },
   {
     "id": 2,
@@ -16,8 +17,9 @@
     },
     "emoji": "🍽",
     "slug": "repas",
+    "unit": "kg",
     "multiplier": 1,
-    "unit": "par repas comprenant la fabrication, la distribution et la consommation"
+    "including": "par repas comprenant la fabrication, la distribution et la consommation"
   },
   {
     "id": 3,
@@ -26,8 +28,9 @@
     },
     "emoji": "🍹",
     "slug": "boisson",
-    "multiplier": 100,
-    "unit": " pour 100 litres de produit comprenant la fabrication, la distribution et la consommation"
+    "unit": "g",
+    "multiplier": 1000,
+    "including": " pour 100 litres de produit comprenant la fabrication, la distribution et la consommation"
   },
   {
     "id": 4,
@@ -36,8 +39,9 @@
     },
     "emoji": "🚴‍♂️",
     "slug": "deplacement",
-    "multiplier": 10,
-    "unit": "pour 10 km comprenant les émissions directes, et la production et distribution de carburant et d'électricité"
+    "unit": "g",
+    "multiplier": 1000,
+    "including": "pour 10 km comprenant les émissions directes, et la production et distribution de carburant et d'électricité"
   },
   {
     "id": 5,
@@ -46,8 +50,9 @@
     },
     "emoji": "👔",
     "slug": "habillement",
+    "unit": "kg",
     "multiplier": 1,
-    "unit": "par produit comprenant la fabrication et la distribution"
+    "including": "par produit comprenant la fabrication et la distribution"
   },
   {
     "id": 6,
@@ -56,8 +61,9 @@
     },
     "emoji": "🛁",
     "slug": "electromenager",
+    "unit": "kg",
     "multiplier": 1,
-    "unit": "par produit comprenant la fabrication et la distribution"
+    "including": "par produit comprenant la fabrication et la distribution"
   },
   {
     "id": 7,
@@ -66,7 +72,19 @@
     },
     "emoji": "🪑",
     "slug": "mobilier",
+    "unit": "kg",
     "multiplier": 1,
-    "unit": "par produit comprenant la fabrication et la distribution"
+    "including": "par produit comprenant la fabrication et la distribution"
+  },
+  {
+    "id": 8,
+    "name": {
+      "fr": "Usages Numériques"
+    },
+    "emoji": "📲",
+    "slug": "usagenumeriques",
+    "unit": "g",
+    "multiplier": 1000,
+    "including": "par produit comprenant le reseau et l'appareil"
   }
 ]

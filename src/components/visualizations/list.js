@@ -9,6 +9,8 @@ import ImprimanteCategory from './ImprimanteCategory'
 import ConsoleSalonCategory from './ConsoleSalonCategory'
 import OrdinateurFixeCategory from './OrdinateurFixeCategory'
 
+import RequeteInternet from './RequeteInternet'
+
 import Boeuf from './Boeuf'
 import PoissonGras from './PoissonGras'
 import PoissonBlanc from './PoissonBlanc'
@@ -33,6 +35,7 @@ const visualizations = {
   imprimantejetdencre: [<ImprimanteCategory />],
   consoledesalon: [<ConsoleSalonCategory />],
   ordinateurfixe: [<OrdinateurFixeCategory />],
+  requeteinternet: [<RequeteInternet />],
   repasvegetalien: [<Vegetalien />],
   repasvegetarien: [<Boeuf />],
   repasavecduboeuf: [<Boeuf />, <SmartphoneGeneral />],
