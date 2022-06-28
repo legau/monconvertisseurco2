@@ -14,13 +14,16 @@ const BigTitle = styled.h1`
   text-align: center;
 `
 const Text = styled.p`
-  margin: 0 auto 4rem;
+  margin: 0 auto 2rem;
   font-size: 1.125rem;
   text-align: center;
 
   ${(props) => props.theme.mq.medium} {
     font-size: 1rem;
   }
+`
+const StyledButtonWrapper = styled(Button.Wrapper)`
+  margin-bottom: 3rem;
 `
 export default function Ranking() {
   const [view, setView] = useState('frise')
@@ -73,14 +76,14 @@ export default function Ranking() {
           Pellentesque quis risus mauris. Nullam porttitor pellentesque felis,
           sed vulputate orci ultrices nec.
         </Text>
-        <Button.Wrapper>
+        <StyledButtonWrapper>
           <Button onClick={() => setView('frise')} hollow={view !== 'frise'}>
             Frise
           </Button>
           <Button onClick={() => setView('graph')} hollow={view !== 'graph'}>
             Graph
           </Button>
-        </Button.Wrapper>
+        </StyledButtonWrapper>
         {view === 'frise' ? (
           <Frise equivalentsToDisplay={equivalentsToDisplay} />
         ) : (

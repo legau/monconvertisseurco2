@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
 
 import Button from 'components/base/Button'
 import Equivalent from './graph/Equivalent'
 
+const StyledButtonWrapper = styled(Button.Wrapper)`
+  margin-top: 2rem;
+`
 export default function Graph(props) {
   const [step, setStep] = useState(0)
   const steps = [0.3, 10, 100, 1000, 10000, 100000]
@@ -19,7 +23,7 @@ export default function Graph(props) {
           key={equivalent.slug}
         />
       ))}
-      <Button.Wrapper>
+      <StyledButtonWrapper>
         <Button
           onClick={() => {
             setStep((prevStep) => prevStep + 1)
@@ -36,7 +40,7 @@ export default function Graph(props) {
         >
           Voir la suite
         </Button>
-      </Button.Wrapper>
+      </StyledButtonWrapper>
     </>
   )
 }
