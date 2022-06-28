@@ -84,13 +84,8 @@ export default function Equivalent(props) {
       </EmojiWrapper>
       <Title>
         <Name>
-          {!props.equivalent.scenario &&
-            (category?.multiplier === 1 ? 'Un' : category?.multiplier)}{' '}
-          {formatName(
-            props.equivalent.name.fr,
-            category?.multiplier,
-            props.equivalent.scenario
-          )}
+          {!props.equivalent.scenario && 'Un '}
+          {formatName(props.equivalent.name.fr, 1, props.equivalent.scenario)}
           {props.equivalent.subtitle ? (
             <Subtitle>
               {formatName(props.equivalent.subtitle.fr, categories.multiplier)}

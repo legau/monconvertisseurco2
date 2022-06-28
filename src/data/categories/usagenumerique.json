@@ -19,12 +19,12 @@
       "fr": "Heure[s] de streaming"
     },
     "subtitle": {
-      "fr": "Qualité 4k"
+      "fr": "1080p"
     },
-    "slug": "streamingwifi4k",
+    "slug": "streamingwifi1080",
     "emoji": "🎞",
     "category": 8,
-    "total": 0.00963,
+    "total": 0.0865,
     "default": true,
     "tile": false,
     "ranking": true
@@ -51,7 +51,7 @@
     "slug": "visioconferencea2",
     "emoji": "🖥",
     "category": 8,
-    "total": 0.00768,
+    "total": 0.0768,
     "default": true,
     "tile": false,
     "ranking": true
@@ -69,7 +69,7 @@
     "total": 0.7,
     "default": false,
     "tile": false,
-    "ranking": true
+    "ranking": false
   },
   {
     "name": {
@@ -84,7 +84,7 @@
     "total": 0.02,
     "default": true,
     "tile": false,
-    "ranking": true
+    "ranking": false
   },
   {
     "name": {
@@ -99,6 +99,6 @@
     "total": 0.142,
     "default": false,
     "tile": false,
-    "ranking": true
+    "ranking": false
   }
 ]

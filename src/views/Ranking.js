@@ -26,7 +26,7 @@ const Frise = styled.div`
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 16.25rem;
+  min-height: 16.25rem;
   padding: 3.5rem 0 3.5rem;
 
   &:before {
@@ -84,8 +84,8 @@ const Tiles = styled.div`
     gap: 0.75rem;
   }
 `
-export default function Co2() {
-  const { equivalents, categories, scenarios } = useContext(DataContext)
+export default function Ranking() {
+  const { equivalents, scenarios } = useContext(DataContext)
 
   const equivalentsToDisplay = useMemo(
     () =>
@@ -101,10 +101,7 @@ export default function Co2() {
           .map((equivalent) => ({
             ...equivalent,
             subtitle: null,
-            totalMultiplied:
-              formatTotal(equivalent) *
-              categories.find((category) => category.id === equivalent.category)
-                .multiplier,
+            totalMultiplied: formatTotal(equivalent),
           })),
         ...scenarios.map((scenario) => ({
           ...equivalents.find(
@@ -123,7 +120,7 @@ export default function Co2() {
           scenario: true,
         })),
       ].sort((a, b) => (a.totalMultiplied > b.totalMultiplied ? 1 : -1)),
-    [equivalents, categories, scenarios]
+    [equivalents, scenarios]
   )
 
   return (

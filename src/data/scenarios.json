@@ -37,42 +37,6 @@
   },
   {
     "name": {
-      "fr": "Un email"
-    },
-    "subtitle": {
-      "fr": "(Écrire, envoyer et lire)"
-    },
-    "equivalent": "email",
-    "emoji": "✉️",
-    "slug": "email",
-    "total": 0.00756
-  },
-  {
-    "name": {
-      "fr": "1h de visio"
-    },
-    "subtitle": {
-      "fr": "(À 2 personnes)"
-    },
-    "equivalent": "visioconference",
-    "emoji": "🖥",
-    "slug": "visio2",
-    "total": 0.099
-  },
-  {
-    "name": {
-      "fr": "1h de visio"
-    },
-    "subtitle": {
-      "fr": "(À 20 personnes)"
-    },
-    "equivalent": "visioconference",
-    "emoji": "🖥",
-    "slug": "visio20",
-    "total": 0.7
-  },
-  {
-    "name": {
       "fr": "Un verre d'eau"
     },
     "subtitle": {
@@ -108,9 +72,9 @@
     "name": {
       "fr": "Regarder une série en streaming"
     },
-    "equivalent": "streaming",
+    "equivalent": "streamingwifi1080",
     "emoji": "🎞",
-    "slug": "seriestreaming",
-    "total": 0.0865
+    "slug": "serie",
+    "multiplier": 0.6
   }
 ]
