@@ -10,6 +10,7 @@ import ConsoleSalonCategory from './ConsoleSalonCategory'
 import OrdinateurFixeCategory from './OrdinateurFixeCategory'
 
 import RequeteInternet from './RequeteInternet'
+import Email from './Email'
 
 import Boeuf from './Boeuf'
 import PoissonGras from './PoissonGras'
@@ -36,6 +37,7 @@ const visualizations = {
   consoledesalon: [<ConsoleSalonCategory />],
   ordinateurfixe: [<OrdinateurFixeCategory />],
   requeteinternet: [<RequeteInternet />],
+  email: [<Email />],
   repasvegetalien: [<Vegetalien />],
   repasvegetarien: [<Boeuf />],
   repasavecduboeuf: [<Boeuf />, <SmartphoneGeneral />],

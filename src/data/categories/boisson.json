@@ -24,7 +24,7 @@
     "category": 3,
     "total": 0.453,
     "default": true,
-    "tile": true,
+    "tile": false,
     "source": "https://bilans-ges.ademe.fr/fr/basecarbone/donnees-consulter/liste-element?recherche=eau"
   },
   {

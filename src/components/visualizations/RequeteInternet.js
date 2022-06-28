@@ -18,7 +18,7 @@ export default function RequeteInternet() {
         En termes d'émissions de CO2<sub>e</sub>
       </Title>
       <Equivalents>
-        <Equivalent size={[, 6, 8]}>
+        <Equivalent size={[7.5, 6, 8]}>
           <Emojis>🚗</Emojis>
           <Label>
             <strong>1 km</strong>
@@ -34,7 +34,7 @@ export default function RequeteInternet() {
           <Label>
             <strong>112</strong>
             <br />
-            requête internet
+            requêtes internet
           </Label>
         </Equivalent>
       </Equivalents>
@@ -45,9 +45,9 @@ export default function RequeteInternet() {
         en voiture
         <br />=
         <br />
-        <strong>112 km</strong>
+        <strong>112</strong>
         <br />
-        requête internet
+        requêtes internet
       </Small>
       <CenterLink to='/co2e'>Voir plus d'équivalences</CenterLink>
     </>
