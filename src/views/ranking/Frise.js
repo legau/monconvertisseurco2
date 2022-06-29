@@ -67,7 +67,7 @@ const Tiles = styled.div`
     gap: 0.75rem;
   }
 `
-export default function Ranking(props) {
+export default function Frise(props) {
   return (
     <Wrapper>
       <Step>

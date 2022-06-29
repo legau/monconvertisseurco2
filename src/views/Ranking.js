@@ -5,6 +5,7 @@ import { formatTotal } from 'utils/formatters'
 import Section from 'components/base/Section'
 import Button from 'components/base/Button'
 import DataContext from 'utils/DataContext'
+import List from './ranking/List'
 import Frise from './ranking/Frise'
 import Graph from './ranking/Graph'
 
@@ -80,11 +81,16 @@ export default function Ranking() {
           <Button onClick={() => setView('frise')} hollow={view !== 'frise'}>
             Frise
           </Button>
+          <Button onClick={() => setView('liste')} hollow={view !== 'liste'}>
+            Liste
+          </Button>
           <Button onClick={() => setView('graph')} hollow={view !== 'graph'}>
             Graph
           </Button>
         </StyledButtonWrapper>
-        {view === 'frise' ? (
+        {view === 'liste' ? (
+          <List equivalentsToDisplay={equivalentsToDisplay} />
+        ) : view === 'frise' ? (
           <Frise equivalentsToDisplay={equivalentsToDisplay} />
         ) : (
           <Graph equivalentsToDisplay={equivalentsToDisplay} />
