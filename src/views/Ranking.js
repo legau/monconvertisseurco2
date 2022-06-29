@@ -26,6 +26,12 @@ const Text = styled.p`
 const StyledButtonWrapper = styled(Button.Wrapper)`
   margin-bottom: 3rem;
 `
+const StyledButton = styled(Button)`
+  &:focus {
+    color: ${(props) => props.theme.colors.background};
+    background-color: ${(props) => props.theme.colors.main};
+  }
+`
 export default function Ranking() {
   const [view, setView] = useState('frise')
 
@@ -78,15 +84,24 @@ export default function Ranking() {
           sed vulputate orci ultrices nec.
         </Text>
         <StyledButtonWrapper>
-          <Button onClick={() => setView('frise')} hollow={view !== 'frise'}>
+          <StyledButton
+            onClick={() => setView('frise')}
+            hollow={view !== 'frise'}
+          >
             Frise
-          </Button>
-          <Button onClick={() => setView('liste')} hollow={view !== 'liste'}>
+          </StyledButton>
+          <StyledButton
+            onClick={() => setView('liste')}
+            hollow={view !== 'liste'}
+          >
             Liste
-          </Button>
-          <Button onClick={() => setView('graph')} hollow={view !== 'graph'}>
+          </StyledButton>
+          <StyledButton
+            onClick={() => setView('graph')}
+            hollow={view !== 'graph'}
+          >
             Graph
-          </Button>
+          </StyledButton>
         </StyledButtonWrapper>
         {view === 'liste' ? (
           <List equivalentsToDisplay={equivalentsToDisplay} />
