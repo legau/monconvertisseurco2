@@ -108,10 +108,7 @@ export default function Frise(props) {
         </Tiles>
       </Step>
       <Step>
-        <Magnitude>
-          1<span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-          000 g
-        </Magnitude>
+        <Magnitude>1 kg</Magnitude>
         <Tiles>
           {props.equivalentsToDisplay
             .filter(
@@ -125,11 +122,7 @@ export default function Frise(props) {
         </Tiles>
       </Step>
       <Step>
-        <Magnitude>
-          10
-          <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-          000 g
-        </Magnitude>
+        <Magnitude>10 kg</Magnitude>
         <Tiles>
           {props.equivalentsToDisplay
             .filter(
@@ -143,11 +136,7 @@ export default function Frise(props) {
         </Tiles>
       </Step>
       <Step>
-        <Magnitude>
-          100
-          <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-          000 g
-        </Magnitude>
+        <Magnitude>100 kg</Magnitude>
         <Tiles>
           {props.equivalentsToDisplay
             .filter(
@@ -161,12 +150,7 @@ export default function Frise(props) {
         </Tiles>
       </Step>
       <Step>
-        <Magnitude>
-          1 <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-          000
-          <span dangerouslySetInnerHTML={{ __html: '&ThinSpace;' }} />
-          000 g
-        </Magnitude>
+        <Magnitude>1 tonne</Magnitude>
         <Tiles>
           {props.equivalentsToDisplay
             .filter(
