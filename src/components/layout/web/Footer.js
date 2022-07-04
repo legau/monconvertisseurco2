@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Section from 'components/base/Section'
 import MagicLink from 'components/base/MagicLink'
 import Marianne from 'components/base/Marianne'
 import Ademe from 'components/base/Ademe'
 import Datagir from 'components/base/Datagir'
+import Menu from './footer/Menu'
 
 const LogosWrapper = styled.div`
   display: flex;
@@ -34,6 +36,11 @@ const Accessibility = styled.div`
 export default function Footer(props) {
   return (
     <>
+      <Section background>
+        <Section.Content>
+          <Menu />
+        </Section.Content>
+      </Section>
       <LogosWrapper>
         <Logos
           to='https://datagir.ademe.fr/'
